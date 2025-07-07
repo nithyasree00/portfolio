@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nithya Sree | Portfolio</title>
+  <style>
+    /* Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f3f7;
+      color: #2c3e50;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    a {
+      color: #2980b9;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #1c5980;
+      text-decoration: underline;
+    }
+    header, footer {
+      background-color: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem 1rem;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto 3rem;
+      padding: 0 1rem;
+      flex-grow: 1;
+    }
+    section {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 8px 20px rgba(44,62,80,0.1);
+      position: relative;
+      overflow: hidden;
+    }
+    section:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 4px;
+      background: #2980b9;
+      border-radius: 2px;
+      opacity: 0.3;
+    }
+    header h1 {
+      font-weight: 700;
+      font-size: 2.5rem;
+      letter-spacing: 1.5px;
+    }
+    .intro {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .intro p {
+      font-size: 1.1rem;
+      margin-top: 1rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #455a64;
+    }
+    .intro img {
+      margin-top: 2rem;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      border: 4px solid #2980b9;
+      transition: transform 0.3s ease;
+    }
+    .intro img:hover {
+      transform: scale(1.05);
+    }
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #2c3e50;
+      letter-spacing: 1px;
+    }
+    h3 {
+      margin-top: 1.5rem;
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: #34495e;
+    }
+    p, ul {
+      font-size: 1rem;
+      color: #555;
+      margin-top: 0.4rem;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    ul li {
+      background: #2980b9;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      box-shadow: 0 4px 8px rgba(41,128,185,0.3);
+      transition: background-color 0.3s ease;
+    }
+    ul li:hover {
+      background: #1c5980;
+      cursor: default;
+    }
+    .project-description {
+      color: #666;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      margin-top: 0.3rem;
+      max-width: 650px;
+    }
+    .skill-bar {
+      margin-top: 0.8rem;
+      background: #e0e0e0;
+      border-radius: 12px;
+      overflow: hidden;
+      height: 18px;
+      max-width: 350px;
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .skill-level {
+      height: 100%;
+      background: #2980b9;
+      text-align: right;
+      padding-right: 8px;
+      color: white;
+      font-weight: 600;
+      font-size: 0.85rem;
+      line-height: 18px;
+      border-radius: 12px 0 0 12px;
+      white-space: nowrap;
+    }
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1rem;
+      color: #2c3e50;
+      transition: color 0.3s ease;
+    }
+    .contact-item a {
+      color: #2980b9;
+      font-weight: 600;
+    }
+    .contact-item img {
+      width: 22px;
+      height: 22px;
+      filter: brightness(0) saturate(100%) invert(31%) sepia(77%) saturate(1701%) hue-rotate(191deg) brightness(96%) contrast(92%);
+      transition: filter 0.3s ease;
+    }
+    .contact-item a:hover img {
+      filter: brightness(0) saturate(100%) invert(40%) sepia(15%) saturate(458%) hue-rotate(179deg) brightness(104%) contrast(105%);
+    }
+    footer p {
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      opacity: 0.8;
+    }
+    @media (max-width: 600px) {
+      ul {
+        justify-content: center;
+      }
+      .skill-bar {
+        max-width: 100%;
+      }
+      .contact-links {
+        flex-direction: column;
+        gap: 12px;
+      }
+    }
+    
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Nithya Sree</h1>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <p>I am a passionate Computer Science student and aspiring full-stack developer with a strong foundation in algorithms, system design, and modern web technologies. I thrive on building real-world applications and continuously learning through hands-on experience.</p>
+      <img src="chinnu.jpeg" alt="Nithya Sree" />
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+
+      <h3>YouTube Summarizer</h3>
+      <p class="project-description"><strong>Tech Stack:</strong> Next.js, AI APIs<br>
+      An AI-powered tool that generates summaries of YouTube videos using different AI models. Features multi-language support, history tracking, and flexible API integration.</p>
+
+      <h3>JobFit AI Matchmaker</h3>
+      <p class="project-description"><strong>Tech Stack:</strong> Node.js, TypeScript<br>
+      An AI-based resume-to-job matching system that uses semantic matching to improve hiring relevance.</p>
+
+      <h3>BookMyShow Clone – Internship Project</h3>
+      <p class="project-description"><strong>Organization:</strong> NULLCLASS | <strong>Role:</strong> Web Development Intern<br>
+      <strong>Duration:</strong> June 2025 – July 2025 (Online)<br>
+      <strong>Tech Stack:</strong> Python, Django, HTML, CSS, Bootstrap, Git, VS Code<br>
+      A hands-on internship project enhancing a Django-based movie booking website.<br><br>
+      <a href="https://django-book-my-show-n9cp8qyj6-nithya-srees-projects.vercel.app ">view project</a>
+      <p>Developed features independently, improving skills in backend logic, debugging, and deployment.</p>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <ul>
+        <li>Full-Stack Web Development</li>
+        <li>React.js</li>
+        <li>Spring Boot</li>
+        <li>MongoDB</li>
+        <li>Python</li>
+        <li>Java</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <p><strong>Bachelor of Technology in Computer Science</strong><br>
+      Vignan’s Foundation for Science, Technology and Research, Guntur<br>
+      Expected Graduation: 2027</p>
+
+      <p><strong>Intermediate (MPC)</strong><br>
+      Bhashyam Junior College<br>
+      Completed in 2022 | CGPA: 8.4 / 10</p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <div class="contact-links">
+        <div class="contact-item">
+          <a href="https://github.com/nithyasree00" target="_blank" rel="noopener noreferrer">
+            GitHub
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon" />
+          </a>
+        </div>
+        <div class="contact-item">
+          <a href="https://linkedin.com/in/chintala-nithya" target="_blank" rel="noopener noreferrer">
+            LinkedIn
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Icon" />
+          </a>
+        </div>
+        <div class="contact-item">
+          <a href="mailto:chnithya0408@gmail.com">
+            Email
+            <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email Icon" />
+          </a>
+        </div>
+        <div class="contact-item">
+          <span>Location: Guntur, Andhra Pradesh, India</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Nithya Sree. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
